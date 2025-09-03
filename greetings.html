@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>greetings</title>
+</head>
+<body>
+  <h1 id="h1">
+    
+  </h1>
+  
+  <div class="form">
+  <label>
+    Enter your username
+  </label><br>
+  <input type="text" id="username" placeholder="username" required="username">
+  <br>
+    <p id="p1">
+      
+    </p>
+    <button id="submit">SUBMIT</button>
+  </div>
+
+  <script>
+  const h1 = document.getElementById("h1");
+  const username = document.getElementById("username");
+  const submit = document.getElementById("submit");
+ const p1 = document.getElementById("p1");
+   
+  let name;
+  
+  submit.onclick = function(){
+    name = username.value;
+    if(name ===""){
+      p1.textContent = `*please enter your username* `;
+      p1.style.color = "red";
+    }
+    else{
+      p1.textContent = ``;
+      h1.textContent = `Good Night ${name}! `;
+      h1.style.color = "green";
+    }
+  }
+  
+  
+  </script>
+    
+</body>
+</html>
